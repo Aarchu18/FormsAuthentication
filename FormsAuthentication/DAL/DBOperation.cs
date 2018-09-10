@@ -7,9 +7,9 @@ namespace FormsAuthentication.DAL
     {
         public List<LoginList>GetAllUser()
         {
-            using (LoginDBContext model = new LoginDBContext())
+            using (LoginDBContext loginDBContext = new LoginDBContext())
             {
-                return (model.UserTable).ToList();
+                return (loginDBContext.UserTable).ToList();
             }
         }
     }
