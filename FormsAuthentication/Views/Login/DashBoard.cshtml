@@ -1,7 +1,8 @@
-﻿@model UserModel
+﻿@using FormsAuthentication.DAL;
+@model LoginList
 @{
     ViewData["Title"] = "DashBoard";
 }
 
-<h2>Welcome @Model.FullName, your DOB is @Model.DOB</h2>
+<h2>Welcome @Model.UserName</h2>
 

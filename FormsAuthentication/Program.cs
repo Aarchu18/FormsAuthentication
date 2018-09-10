@@ -15,13 +15,6 @@ namespace FormsAuthentication
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
-            using (var ctx = new LoginContext())
-            {
-                var stud = new UserModel() { UserName = "Bill" };
-
-                ctx.Students.Add(stud);
-                ctx.SaveChanges();
-            }
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
